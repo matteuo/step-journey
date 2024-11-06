@@ -10,7 +10,12 @@ export class StepComponent {
   @Input() subLabel?: string;
   @Input() status: 'completed' | 'current' | 'pending' = 'pending';
   @Input() color?: string;
-  @Input() defaultColor!: { completed: string; current: string; pending: string };
+  
+  @Input() defaultColor: { completed: string; current: string; pending: string } = {
+    completed: '#4CAF50',
+    current: '#FF9800',
+    pending: '#BDBDBD'
+  };
 
   get currentColor(): string {
     return this.color || (this.status === 'completed' ? this.defaultColor.completed :
