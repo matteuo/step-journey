@@ -1,0 +1,14 @@
+# Escludere l'applicazione di test
+projects/test-app/
+
+# Escludere cartelle e file inutili
+node_modules/
+dist/
+src/**/*.spec.ts
+angular.json
+tsconfig*.json
+karma.conf.js
+*.log
+.vscode/
+.editorconfig
+.gitignore
