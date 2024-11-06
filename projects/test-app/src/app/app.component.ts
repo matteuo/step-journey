@@ -9,7 +9,7 @@ import { StepJourneyComponent } from 'step-journey';
 export class AppComponent {
   title = 'test-app';
 
-  // Definisci la lista di steps iniziale
+  // Define the list of starting steps
   steps: StepJourneyComponent["steps"] = [
     { label: 'Step 1', status: 'completed', color: '#4CAF50' },
     { label: 'Step 2', status: 'current', color: '#FF9800' },
@@ -17,9 +17,8 @@ export class AppComponent {
     { label: 'Step 4', status: 'pending' }
   ];
 
-  // Metodo per aggiornare la lista di steps
+  // Update the list of steps
   updateSteps() {
-    // Aggiorna con un nuovo riferimento per forzare l'aggiornamento del template
     this.steps = [
       { label: 'Step 1', status: 'completed', color: '#4CAF50' },
       { label: 'Step 2', status: 'completed' },
