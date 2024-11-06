@@ -1,16 +1,22 @@
 <div style="text-align: center;">
-    <div
-      [style.backgroundColor]="currentColor"
-      [style.border]="status === 'current' ? '4px solid ' + currentColor : (status === 'pending' ? '2px solid ' + currentColor : 'none')"
-      class="circle"
-    >
-      <ng-container *ngIf="status === 'completed'">✓</ng-container>
-      <ng-container *ngIf="status === 'current'">
-        <div class="inner-circle" [style.backgroundColor]="currentColor"></div>
-      </ng-container>
-    </div>
-    <div class="label" [style.color]="currentColor">
-      {{ label }}<br *ngIf="subLabel" />
-      <span *ngIf="subLabel">{{ subLabel }}</span>
-    </div>
-</div>  
+  <div
+    [ngClass]="{
+      'circle': true,
+      'current': status === 'current',
+      'completed': status === 'completed',
+      'pending': status === 'pending'
+    }"
+    [style.borderColor]="status === 'current' ? currentColor : 'none'"
+    [style.backgroundColor]="status === 'completed' ? currentColor : (status === 'pending' ? defaultColor.pending : 'white')"
+    title="{{ label }}"
+  >
+    <ng-container *ngIf="status === 'completed'">✓</ng-container>
+    <ng-container *ngIf="status === 'current'">
+      <div class="inner-circle" [style.backgroundColor]="currentColor"></div>
+    </ng-container>
+  </div>
+  <div class="label" [style.color]="currentColor">
+    {{ label }}<br *ngIf="subLabel" />
+    <span *ngIf="subLabel">{{ subLabel }}</span>
+  </div>
+</div>

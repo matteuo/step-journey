@@ -2,21 +2,29 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-}
+    background-color: white; /* Colore di default */
+  }
   
-.inner-circle {
+  .circle.completed {
+    background-color: var(--completed-color, #4CAF50); /* Usa il colore del completamento */
+    color: white;
+  }
+  
+  .circle.pending {
+    background-color: var(--pending-color, #BDBDBD); /* Colore in attesa */
+  }
+  
+  .circle.current {
+    border: 4px solid var(--current-color, #FF9800); /* Colore corrente */
+  }
+  
+  .inner-circle {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-}
-  
-.label {
-    margin-top: 8px;
-    text-align: center;
-}
+  }
   
