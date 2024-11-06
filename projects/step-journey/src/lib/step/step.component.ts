@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-step',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./step.component.css']
 })
 export class StepComponent {
+  @Input() label!: string;
+  @Input() subLabel?: string;
+  @Input() status: 'completed' | 'current' | 'pending' = 'pending';
+  @Input() color?: string;
+  @Input() defaultColor!: { completed: string; current: string; pending: string };
 
+  get currentColor(): string {
+    return this.color || (this.status === 'completed' ? this.defaultColor.completed :
+                          this.status === 'current' ? this.defaultColor.current :
+                          this.defaultColor.pending);
+  }
 }

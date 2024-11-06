@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-divider',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./divider.component.css']
 })
 export class DividerComponent {
-
+  @Input() color: string = '#BDBDBD';
 }

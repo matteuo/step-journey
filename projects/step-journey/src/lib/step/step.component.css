@@ -1,0 +1,22 @@
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+  
+.inner-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+  
+.label {
+    margin-top: 8px;
+    text-align: center;
+}
+  

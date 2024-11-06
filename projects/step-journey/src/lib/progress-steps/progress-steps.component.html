@@ -1,1 +1,16 @@
-<p>progress-steps works!</p>
+<div class="progress-container">
+    <ng-container *ngFor="let step of steps; let i = index">
+      <lib-step
+        [label]="step.label"
+        [subLabel]="step.subLabel"
+        [status]="step.status"
+        [color]="step.color"
+        [defaultColor]="colorConfig"
+      ></lib-step>
+  
+      <lib-divider
+        *ngIf="i < steps.length - 1"
+        [color]="steps[i + 1].status === 'pending' ? (steps[i + 1].color || colorConfig.pending) : (step.color || colorConfig.completed)"
+      ></lib-divider>
+    </ng-container>
+</div>
