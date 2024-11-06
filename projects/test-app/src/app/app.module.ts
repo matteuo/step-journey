@@ -7,7 +7,7 @@ import { StepJourneyModule } from 'step-journey';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    StepJourneyModule  // Aggiungi la tua libreria qui
+    StepJourneyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
