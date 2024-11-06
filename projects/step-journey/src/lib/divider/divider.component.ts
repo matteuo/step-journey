@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class DividerComponent {
   @Input() color: string = '#BDBDBD';
+  @Input() width: string = '4px';
 }

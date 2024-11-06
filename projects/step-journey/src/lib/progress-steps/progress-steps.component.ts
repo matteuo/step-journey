@@ -13,4 +13,5 @@ export class ProgressStepsComponent {
     current: '#FF9800',
     pending: '#BDBDBD'
   };
+  @Input() dividerWidth: string = '4px';
 }

@@ -11,6 +11,7 @@
     <lib-divider
       *ngIf="i < steps.length - 1"
       [color]="steps[i + 1].status === 'pending' ? (steps[i + 1].color || colorConfig.pending) : (step.color || colorConfig.completed)"
+      [width]="dividerWidth"
     ></lib-divider>
   </ng-container>
 </div>
