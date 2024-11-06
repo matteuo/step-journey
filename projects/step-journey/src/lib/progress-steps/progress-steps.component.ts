@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Step, ColorConfig } from '../step-journey.component';
+import { Step, ColorConfig } from '../step-journey.types';
 
 @Component({
   selector: 'lib-progress-steps',

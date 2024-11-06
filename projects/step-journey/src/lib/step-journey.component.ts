@@ -1,17 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export interface Step {
-  label: string;
-  subLabel?: string;
-  status: 'completed' | 'current' | 'pending';
-  color?: string;
-}
-
-export interface ColorConfig {
-  completed: string;
-  current: string;
-  pending: string;
-}
+import { Step, ColorConfig } from './step-journey.types';
 
 @Component({
   selector: 'lib-step-journey',
