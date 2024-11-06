@@ -1,9 +1,10 @@
+<h1>{{ title }}</h1>
+
+<!-- Bottone per aggiornare gli step -->
+<button (click)="updateSteps()">Update Steps</button>
+
+<!-- Componente step-journey con binding della lista di steps -->
 <lib-step-journey
-  [steps]="[
-    { label: 'Step 1', status: 'completed', color: '#4CAF50' },
-    { label: 'Step 2', status: 'completed'},
-    { label: 'Step 3', status: 'current', color: '#FF9800' },
-    { label: 'Step 4', status: 'pending' }
-  ]"
-  dividerWidth="80px" 
+  [steps]="steps"
+  dividerWidth="80px"
 ></lib-step-journey>
