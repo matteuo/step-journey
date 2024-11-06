@@ -1,26 +1,28 @@
 {
   "name": "step-journey",
   "version": "1.0.0",
+  "description": "A customizable Angular library for visualizing step-by-step journeys.",
+  "author": "Matteo",
+  "license": "MIT",
+  "private": false,
+  "main": "esm2022/public-api.mjs",
+  "module": "esm2022/step-journey.mjs",
+  "es2015": "esm2022/step-journey.mjs",
+  "typings": "public-api.d.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build step-journey",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": false,
+  "peerDependencies": {
+    "@angular/core": "^16.0.0",
+    "@angular/common": "^16.0.0"
+  },
   "dependencies": {
-    "@angular/animations": "^16.2.0",
-    "@angular/common": "^16.2.0",
-    "@angular/compiler": "^16.2.0",
-    "@angular/core": "^16.2.0",
-    "@angular/forms": "^16.2.0",
-    "@angular/platform-browser": "^16.2.0",
-    "@angular/platform-browser-dynamic": "^16.2.0",
-    "@angular/router": "^16.2.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.16",
@@ -35,5 +37,13 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^16.2.0",
     "typescript": "~5.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matteuo/step-journey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matteuo/step-journey/issues"
+  },
+  "homepage": "https://github.com/matteuo/step-journey#readme"
 }
