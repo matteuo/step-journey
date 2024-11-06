@@ -16,7 +16,8 @@
     </ng-container>
   </div>
   <div class="label" [style.color]="currentColor">
-    {{ label }}<br *ngIf="subLabel" />
-    <span *ngIf="subLabel">{{ subLabel }}</span>
+    <div class="label-text">{{ label }}</div>
+    <div class="sub-label" *ngIf="subLabel">{{ subLabel }}</div>
   </div>
+  
 </div>
