@@ -1,6 +1,6 @@
 {
   "name": "step-journey",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A customizable Angular library for visualizing step-by-step journeys.",
   "author": "Matteo",
   "license": "MIT",
