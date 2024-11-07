@@ -1,24 +1,97 @@
-# StepJourney
+# Step Journey Library
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+`step-journey` is an Angular library designed to create customizable and dynamic step-by-step progress bars. This library allows you to define a sequence of steps with customizable colors, statuses, and labels, making it ideal for visualizing multi-step workflows.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name --project step-journey` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project step-journey`.
-> Note: Don't forget to add `--project step-journey` or else it will be added to the default project in your `angular.json` file. 
+- **Dynamic Step Management**: Easily update the list of steps and display their statuses as `completed`, `current`, or `pending`.
+- **Customizable Styling**: Define specific colors for each step or set defaults for `completed`, `current`, and `pending` statuses.
+- **Flexible Divider Width**: Customize the width of dividers between steps for enhanced visual control.
+- **Modular Components**: Library is structured with separate components for each step, divider, and overall journey, enabling clear customization and maintenance.
 
-## Build
+## Usage
 
-Run `ng build step-journey` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Importing the Module
 
-## Publishing
+In your Angular application, import `StepJourneyModule` from `step-journey` in the main application module:
 
-After building your library with `ng build step-journey`, go to the dist folder `cd dist/step-journey` and run `npm publish`.
+```typescript
+import { StepJourneyModule } from 'step-journey';
 
-## Running unit tests
+@NgModule({
+  imports: [StepJourneyModule],
+  // other imports
+})
+export class AppModule {}
+```
 
-Run `ng test step-journey` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Adding `StepJourneyComponent` to Your Template
 
-## Further help
+The main component, `lib-step-journey`, accepts an array of steps and other optional customization inputs.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Example usage in a template:
+
+```html
+<lib-step-journey
+  [steps]="[
+    { label: 'Step 1', status: 'completed', color: '#4CAF50' },
+    { label: 'Step 2', status: 'completed' },
+    { label: 'Step 3', status: 'current', color: '#FF9800' },
+    { label: 'Step 4', status: 'pending' }
+  ]"
+  dividerWidth="80px"  <!-- Optional width for the dividers -->
+></lib-step-journey>
+```
+
+### Properties
+
+The `StepJourneyComponent` supports the following properties:
+
+- **`steps`** (`Step[]`): An array of steps defining each step’s `label`, `subLabel`, `status`, and optional `color`.
+  - `label` (string): Main label for the step.
+  - `subLabel` (string, optional): Additional label below the main label.
+  - `status` (`'completed' | 'current' | 'pending'`): Defines the step's state.
+  - `color` (string, optional): Custom color for this specific step.
+- **`dividerWidth`** (`string`, optional): Width of dividers between steps. Default is `4px`.
+
+### Updating Steps Dynamically
+
+To dynamically update the steps, use an Angular binding and a function in your component class. For example:
+
+#### In `app.component.ts`
+
+```typescript
+export class AppComponent {
+  steps = [
+    { label: 'Step 1', status: 'completed', color: '#4CAF50' },
+    { label: 'Step 2', status: 'completed' },
+    { label: 'Step 3', status: 'current', color: '#FF9800' },
+    { label: 'Step 4', status: 'pending' }
+  ];
+
+  updateSteps() {
+    this.steps = [
+      { label: 'Step 1', status: 'completed', color: '#4CAF50' },
+      { label: 'Step 2', status: 'completed' },
+      { label: 'Step 3', status: 'completed' },
+      { label: 'Step 4', status: 'current', color: '#FF9800' },
+      { label: 'Step 5', status: 'pending' }
+    ];
+  }
+}
+```
+
+#### In `app.component.html`
+
+```html
+<button (click)="updateSteps()">Update Steps</button>
+<lib-step-journey [steps]="steps" dividerWidth="80px"></lib-step-journey>
+```
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and make changes as you'd like. Submit a pull request for any bug fixes or enhancements.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
