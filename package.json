@@ -1,8 +1,8 @@
 {
   "name": "step-journey",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A customizable Angular library for visualizing step-by-step journeys.",
-  "author": "Matteo",
+  "author": "matteuo",
   "license": "MIT",
   "private": false,
   "main": "esm2022/public-api.mjs",

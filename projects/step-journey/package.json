@@ -1,6 +1,9 @@
 {
   "name": "step-journey",
-  "version": "0.0.1",
+  "version": "1.0.8",
+  "description": "A customizable Angular library for visualizing step-by-step journeys.",
+  "author": "matteuo",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
@@ -8,5 +11,13 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matteuo/step-journey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matteuo/step-journey/issues"
+  },
+  "homepage": "https://github.com/matteuo/step-journey#readme"
 }
