@@ -1,4 +1,4 @@
-<div class="progress-container">
+<div class="progress-container" [ngStyle]="{ 'max-width': maxWidth }">
   <ng-container *ngFor="let step of steps; let i = index">
     <lib-step
       [label]="step.label"
