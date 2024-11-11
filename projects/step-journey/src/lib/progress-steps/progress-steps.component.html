@@ -1,11 +1,13 @@
-<div class="progress-container">
+<div class="progress-container" [ngStyle]="{ 'max-width': maxWidth }">
   <ng-container *ngFor="let step of steps; let i = index">
     <lib-step
       [label]="step.label"
       [subLabel]="step.subLabel"
       [status]="step.status"
       [color]="step.color"
+      [tooltipText]="step.tooltipText"
       [defaultColor]="colorConfig"
+      [fontSize]="fontSize"
     ></lib-step>
 
     <lib-divider

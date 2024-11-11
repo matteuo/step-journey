@@ -3,6 +3,7 @@ export interface Step {
     subLabel?: string;
     status: 'completed' | 'current' | 'pending';
     color?: string;
+    tooltipText?: string;
 }
   
 export interface ColorConfig {

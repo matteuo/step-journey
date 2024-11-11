@@ -36,10 +36,12 @@ Example usage in a template:
   [steps]="[
     { label: 'Step 1', status: 'completed', color: '#4CAF50' },
     { label: 'Step 2', status: 'completed' },
-    { label: 'Step 3', status: 'current', color: '#FF9800' },
+    { label: 'Step 3', status: 'current', color: '#FF9800', tooltipText: 'Step 3 tooltip text' },
     { label: 'Step 4', status: 'pending' }
   ]"
-  dividerWidth="80px"  <!-- Optional width for the dividers -->
+  dividerWidth="80px"
+  maxWidth="900px"
+  fontSize="1.2em"
 ></lib-step-journey>
 ```
 
@@ -52,7 +54,10 @@ The `StepJourneyComponent` supports the following properties:
   - `subLabel` (string, optional): Additional label below the main label.
   - `status` (`'completed' | 'current' | 'pending'`): Defines the step's state.
   - `color` (string, optional): Custom color for this specific step.
+  - `tooltipText` (string, optional): Custom description for this specific step, appears as an html title attribute.
 - **`dividerWidth`** (`string`, optional): Width of dividers between steps. Default is `4px`.
+- **`maxWidth`** (`string`, optional): Max width of complete component. Default is `600px`.
+- **`fontSize`** (`string`, optional): Font size of label. Default is `0.7em`.
 
 ### Updating Steps Dynamically
 
@@ -65,7 +70,7 @@ export class AppComponent {
   steps = [
     { label: 'Step 1', status: 'completed', color: '#4CAF50' },
     { label: 'Step 2', status: 'completed' },
-    { label: 'Step 3', status: 'current', color: '#FF9800' },
+    { label: 'Step 3', status: 'current', color: '#FF9800', tooltipText: 'Step 3 tooltip text' },
     { label: 'Step 4', status: 'pending' }
   ];
 
@@ -73,7 +78,7 @@ export class AppComponent {
     this.steps = [
       { label: 'Step 1', status: 'completed', color: '#4CAF50' },
       { label: 'Step 2', status: 'completed' },
-      { label: 'Step 3', status: 'completed' },
+      { label: 'Step 3', status: 'completed', tooltipText: 'Step 3 tooltip text' },
       { label: 'Step 4', status: 'current', color: '#FF9800' },
       { label: 'Step 5', status: 'pending' }
     ];
@@ -85,7 +90,7 @@ export class AppComponent {
 
 ```html
 <button (click)="updateSteps()">Update Steps</button>
-<lib-step-journey [steps]="steps" dividerWidth="80px"></lib-step-journey>
+<lib-step-journey [steps]="steps" dividerWidth="80px" maxWidth="900px" fontSize="1.2em"></lib-step-journey>
 ```
 
 ## Contributing
