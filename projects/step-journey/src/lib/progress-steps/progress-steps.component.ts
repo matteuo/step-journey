@@ -11,7 +11,7 @@ export class ProgressStepsComponent {
   @Input() colorConfig: ColorConfig = {
     completed: '#4CAF50',
     current: '#FF9800',
-    pending: '#BDBDBD'
+    pending: '#808080'
   };
   @Input() dividerWidth: string = '4px';
   @Input() maxWidth: string = '600px';

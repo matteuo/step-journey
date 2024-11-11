@@ -15,7 +15,7 @@ export class StepComponent {
   @Input() defaultColor: { completed: string; current: string; pending: string } = {
     completed: '#4CAF50',
     current: '#FF9800',
-    pending: '#BDBDBD'
+    pending: '#808080'
   };
 
   @Input() fontSize: string = '0.7em';

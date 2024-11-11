@@ -20,7 +20,7 @@
 }
 
 .circle.pending {
-    background-color: var(--pending-color, #BDBDBD);
+    background-color: var(--pending-color, #808080);
 }
 
 .circle.current {

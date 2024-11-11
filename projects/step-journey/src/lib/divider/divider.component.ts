@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./divider.component.css']
 })
 export class DividerComponent {
-  @Input() color: string = '#BDBDBD';
+  @Input() color: string = '#808080';
   @Input() width: string = '4px';
 }
