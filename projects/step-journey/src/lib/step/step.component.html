@@ -16,7 +16,7 @@
     </ng-container>
   </div>
   <div class="label" [style.color]="currentColor">
-    <div class="label-text">{{ label }}</div>
-    <div class="sub-label" *ngIf="subLabel">{{ subLabel }}</div>
+    <div class="label-text" [ngStyle]="{ 'font-size': fontSize }">{{ label }}</div>
+    <div class="sub-label" *ngIf="subLabel" [ngStyle]="{ 'font-size': fontSize }">{{ subLabel }}</div>
   </div>
 </div>

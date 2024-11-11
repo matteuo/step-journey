@@ -15,4 +15,5 @@ export class ProgressStepsComponent {
   };
   @Input() dividerWidth: string = '4px';
   @Input() maxWidth: string = '600px';
+  @Input() fontSize: string = '0.7em';
 }

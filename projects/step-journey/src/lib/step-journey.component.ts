@@ -3,7 +3,7 @@ import { Step, ColorConfig } from './step-journey.types';
 
 @Component({
   selector: 'lib-step-journey',
-  template: `<lib-progress-steps [steps]="steps" [colorConfig]="colorConfig" [dividerWidth]="dividerWidth" [maxWidth]="maxWidth"></lib-progress-steps>`,
+  template: `<lib-progress-steps [steps]="steps" [colorConfig]="colorConfig" [dividerWidth]="dividerWidth" [maxWidth]="maxWidth" [fontSize]="fontSize"></lib-progress-steps>`,
 })
 export class StepJourneyComponent {
   @Input() steps: Step[] = [];
@@ -14,4 +14,5 @@ export class StepJourneyComponent {
   };
   @Input() dividerWidth: string = '4px';
   @Input() maxWidth: string = '600px';
+  @Input() fontSize: string = '0.7em';
 }

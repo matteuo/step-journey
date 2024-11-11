@@ -17,6 +17,8 @@ export class StepComponent {
     pending: '#BDBDBD'
   };
 
+  @Input() fontSize: string = '0.7em';
+  
   get currentColor(): string {
     return this.color || (this.status === 'completed' ? this.defaultColor.completed :
                           this.status === 'current' ? this.defaultColor.current :
