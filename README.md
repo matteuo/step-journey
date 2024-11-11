@@ -101,7 +101,8 @@ Example usage in a template:
     { label: 'Step 3', status: 'current', color: '#FF9800' },
     { label: 'Step 4', status: 'pending' }
   ]"
-  dividerWidth="80px"  <!-- Optional width for the dividers -->
+  dividerWidth="80px"
+  fontSize="1.2em"
 ></lib-step-journey>
 ```
 
@@ -115,6 +116,7 @@ The `StepJourneyComponent` supports the following properties:
   - `status` (`'completed' | 'current' | 'pending'`): Defines the step's state.
   - `color` (string, optional): Custom color for this specific step.
 - **`dividerWidth`** (`string`, optional): Width of dividers between steps. Default is `4px`.
+- **`fontSize`** (`string`, optional): Font size of label. Default is `0.7em`.
 
 ### Updating Steps Dynamically
 
@@ -147,7 +149,7 @@ export class AppComponent {
 
 ```html
 <button (click)="updateSteps()">Update Steps</button>
-<lib-step-journey [steps]="steps" dividerWidth="80px"></lib-step-journey>
+<lib-step-journey [steps]="steps" dividerWidth="80px" fontSize="1.2em"></lib-step-journey>
 ```
 
 ## Contributing
