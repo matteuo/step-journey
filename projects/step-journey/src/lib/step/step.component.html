@@ -1,4 +1,4 @@
-<div class="step" title="{{ label }}">
+<div class="step" title="{{ tooltipText ? tooltipText : label }}">
   <div
     [ngClass]="{
       'circle': true,
@@ -8,14 +8,14 @@
     }"
     [style.borderColor]="status === 'current' ? currentColor : 'none'"
     [style.backgroundColor]="status === 'completed' ? currentColor : (status === 'pending' ? defaultColor.pending : 'white')"
-    title="{{ label }}"
+    title="{{ tooltipText ? tooltipText : label }}"
   >
     <ng-container *ngIf="status === 'completed'">✓</ng-container>
     <ng-container *ngIf="status === 'current'">
       <div class="inner-circle" [style.backgroundColor]="currentColor"></div>
     </ng-container>
   </div>
-  <div class="step-label" [style.color]="currentColor" title="{{ label }}">
+  <div class="step-label" [style.color]="currentColor" title="{{ tooltipText ? tooltipText : label }}">
     <div class="step-label-text" [ngStyle]="{ 'font-size': fontSize }">{{ label }}</div>
     <div class="step-sub-label" *ngIf="subLabel" [ngStyle]="{ 'font-size': fontSize }">{{ subLabel }}</div>
   </div>

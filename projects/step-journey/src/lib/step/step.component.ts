@@ -10,6 +10,7 @@ export class StepComponent {
   @Input() subLabel?: string;
   @Input() status: 'completed' | 'current' | 'pending' = 'pending';
   @Input() color?: string;
+  @Input() tooltipText?: string;
   
   @Input() defaultColor: { completed: string; current: string; pending: string } = {
     completed: '#4CAF50',
