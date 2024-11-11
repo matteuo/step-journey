@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div class="step" title="{{ label }}">
   <div
     [ngClass]="{
       'circle': true,
@@ -15,8 +15,8 @@
       <div class="inner-circle" [style.backgroundColor]="currentColor"></div>
     </ng-container>
   </div>
-  <div class="label" [style.color]="currentColor">
-    <div class="label-text" [ngStyle]="{ 'font-size': fontSize }">{{ label }}</div>
-    <div class="sub-label" *ngIf="subLabel" [ngStyle]="{ 'font-size': fontSize }">{{ subLabel }}</div>
+  <div class="step-label" [style.color]="currentColor" title="{{ label }}">
+    <div class="step-label-text" [ngStyle]="{ 'font-size': fontSize }">{{ label }}</div>
+    <div class="step-sub-label" *ngIf="subLabel" [ngStyle]="{ 'font-size': fontSize }">{{ subLabel }}</div>
   </div>
 </div>
