@@ -4,6 +4,7 @@ import { Step, ColorConfig } from './step-journey.types';
 @Component({
   selector: 'lib-step-journey',
   template: `<lib-progress-steps [steps]="steps" [colorConfig]="colorConfig" [dividerWidth]="dividerWidth" [maxWidth]="maxWidth" [fontSize]="fontSize"></lib-progress-steps>`,
+  standalone: false
 })
 export class StepJourneyComponent {
   @Input() steps: Step[] = [];

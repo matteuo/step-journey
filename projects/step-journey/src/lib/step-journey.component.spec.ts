@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StepJourneyComponent } from './step-journey.component';
+import { StepJourneyModule } from './step-journey.module';
 
 describe('StepJourneyComponent', () => {
   let component: StepJourneyComponent;
@@ -8,7 +9,7 @@ describe('StepJourneyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StepJourneyComponent]
+      imports: [StepJourneyModule]
     });
     fixture = TestBed.createComponent(StepJourneyComponent);
     component = fixture.componentInstance;

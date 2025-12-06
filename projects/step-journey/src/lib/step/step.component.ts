@@ -3,7 +3,8 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'lib-step',
   templateUrl: './step.component.html',
-  styleUrls: ['./step.component.css']
+  styleUrls: ['./step.component.css'],
+  standalone: false
 })
 export class StepComponent {
   @Input() label!: string;
