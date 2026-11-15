@@ -9,6 +9,19 @@
 - **Flexible Divider Width**: Customize the width of dividers between steps for enhanced visual control.
 - **Modular Components**: Library is structured with separate components for each step, divider, and overall journey, enabling clear customization and maintenance.
 
+## Installation
+
+```bash
+npm install step-journey
+```
+
+### Angular compatibility
+
+| step-journey | Angular        |
+|--------------|----------------|
+| 2.x          | 21.x, 22.x     |
+| 1.0.16       | 19.x           |
+
 ## Usage
 
 ### Importing the Module

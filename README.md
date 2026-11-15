@@ -40,6 +40,19 @@ step-journey/
 
 To use `step-journey` in your Angular project:
 
+```bash
+npm install step-journey
+```
+
+### Angular compatibility
+
+| step-journey | Angular        |
+|--------------|----------------|
+| 2.x          | 21.x, 22.x     |
+| 1.0.16       | 19.x           |
+
+## Development
+
 1. Clone the repository and navigate to the project root.
 2. Install dependencies:
    ```bash
@@ -51,10 +64,18 @@ To use `step-journey` in your Angular project:
 To build the library, run:
 
 ```bash
-ng build step-journey
+npm run build:lib
 ```
 
-This command will compile the library and place the output in the `dist/step-journey` directory. After building, the library can be linked locally or published to a package registry like npm.
+This command will compile the library and place the output in the `dist/step-journey` directory.
+
+To publish it to npm, bump the version in `projects/step-journey/package.json` and run:
+
+```bash
+npm run publish:lib
+```
+
+This builds the library and publishes `dist/step-journey`. Do not run `npm publish` from the repository root.
 
 ## Testing the Library
 
