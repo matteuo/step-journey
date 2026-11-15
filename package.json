@@ -1,14 +1,10 @@
 {
   "name": "step-journey",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A customizable Angular library for visualizing step-by-step journeys.",
   "author": "matteuo",
   "license": "MIT",
-  "private": false,
-  "main": "esm2022/public-api.mjs",
-  "module": "esm2022/step-journey.mjs",
-  "es2015": "esm2022/step-journey.mjs",
-  "typings": "public-api.d.ts",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
